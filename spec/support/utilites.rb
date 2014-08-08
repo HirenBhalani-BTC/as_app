@@ -19,7 +19,7 @@ module ApplicationHelper
   	end
   end
 end
-<<<<<<< HEAD
+
 def sign_in(user, options={})
   if options[:no_capybara]
     # Sign in when not using Capybara.
@@ -32,7 +32,7 @@ def sign_in(user, options={})
     fill_in "Password", with: user.password
     click_button "Sign in"
   end
-=======
+
 
 def sign_in(user,options={})
   	if options[:no_capybara]
@@ -45,5 +45,5 @@ def sign_in(user,options={})
   		fill_in "Password", with: user.password
   		click_button "Sign in"
   	end
->>>>>>> user-microposts
+
 end

@@ -4,9 +4,9 @@
 
 <ul class="users">
 <% @users.each do |usr| %>
-<<<<<<< HEAD
+
 	<%= render @users %>
-=======
+
 	<li>
 	<%= gravatar_for usr, size:52 %>
 	<%= link_to usr.name, usr %>
@@ -15,7 +15,7 @@
                                   data: { confirm: "You sure?" } %>
   <% end %>
 	</li>
->>>>>>> user-microposts
+s
 <% end %>
 </ul>
 <%= will_paginate %>

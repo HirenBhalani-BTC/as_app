@@ -115,7 +115,7 @@ describe "User Pages" do
 		 	visit edit_user_path(user) 
 		end
 		describe "page" do
-<<<<<<< HEAD
+
 		it { should have_content("Update your profile") }
 		it { should have_title("Edit user") }
 		it { should have_link('change', href: 'http://gravatar.com/emails') }
@@ -139,7 +139,7 @@ describe "User Pages" do
 		end
 	end
 end
-=======
+
 			it { should have_content("Update your profile") }
 			it { should have_title("Edit user") }
 			it { should have_link('change', href: 'http://gravatar.com/emails') }
@@ -173,4 +173,4 @@ end
 		end
 	end
 end
->>>>>>> user-microposts
+
