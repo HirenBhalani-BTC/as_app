@@ -71,7 +71,11 @@ describe 'Authentication' do
 				describe "after signing in" do
 
 					it "should render the desired protected page" do
+<<<<<<< HEAD
 						# expect(page).to have_title('Edit user')
+=======
+						expect(page).to have_title('Edit user')
+>>>>>>> user-microposts
 					end
 
 					describe "when signing in again" do
@@ -88,6 +92,7 @@ describe 'Authentication' do
 					end
 				end
 			end
+<<<<<<< HEAD
 
 
 
@@ -103,6 +108,8 @@ describe 'Authentication' do
           			specify { expect(response).to redirect_to(signin_path) }
         		end
       		end
+=======
+>>>>>>> user-microposts
  			describe "in the Users controller" do
 
 				describe "visiting the edit page" do

@@ -4,7 +4,18 @@
 
 <ul class="users">
 <% @users.each do |usr| %>
+<<<<<<< HEAD
 	<%= render @users %>
+=======
+	<li>
+	<%= gravatar_for usr, size:52 %>
+	<%= link_to usr.name, usr %>
+	<% if current_user.admin? && !current_user?(usr)  %>
+    | <%= link_to "delete", usr, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+  <% end %>
+	</li>
+>>>>>>> user-microposts
 <% end %>
 </ul>
 <%= will_paginate %>
