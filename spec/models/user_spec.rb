@@ -15,21 +15,11 @@ describe User do
   it { should respond_to(:authenticate)}
   it{ should respond_to(:admin)}
 
-<<<<<<< HEAD
   it{ should respond_to(:microposts)}
   it{ should respond_to(:feed)}
 
   it { should be_valid }
   it { should_not be_admin}
-=======
-  it { should respond_to(:microposts)}
-
-  it { should be_valid }
-  it { should_not be_admin}
-
-
-
->>>>>>> user-microposts
   
   describe "with admin attribute set to 'true'" do 
     before do
@@ -125,7 +115,6 @@ describe User do
 
 
 
-
   describe "micropost associations" do
     before { @user.save}
     let!(:older_micropost) do
@@ -133,21 +122,11 @@ describe User do
     end
     let!(:newer_micropost) do
       FactoryGirl.create(:micropost, user: @user, created_at: 1.hour.ago)
-
-  describe "mocropost associations" do
-    before { @user.save}
-    let!(:order_micropost) do
-      FactoryGirl.create(:micropost, user: @user, created_at: 1.day.ago)
-    end
-    let!(:newer_micropost) do
-      FactoryGirl.create(:micropost, user :@user,created_at: 1.hour.ago)
-
     end
 
     it "should have the right microposts in the right order" do
       expect(@user.microposts.to_a).to eq [newer_micropost,older_micropost]
     end
-
 
     it "should destroy associated microposts" do
       microposts=@user.microposts.to_a
@@ -167,6 +146,5 @@ describe User do
       its(:feed) { should include(older_micropost)}
       its(:feed) { should_not include(unfollowed_post)}
     end
-
   end
 end

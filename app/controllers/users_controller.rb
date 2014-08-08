@@ -8,9 +8,7 @@ before_action :admin_user, only: :destroy
 
   	def show
   		@user=User.find(params[:id])
-
       @microposts=@user.microposts.paginate(page: params[:page])
-
   	end
   
   	def new
@@ -22,11 +20,7 @@ before_action :admin_user, only: :destroy
   	end
 
   	def update
-
   		# @user = User.find(params[:id])
-
-  		 @user = User.find(params[:id])
-
   		if @user.update_attributes(user_params)
   			flash[:success]="Profile updated"
   			redirect_to @user
@@ -71,10 +65,6 @@ before_action :admin_user, only: :destroy
   	end
 
     def admin_user
-
       redirect_to(root_url) unless current_user.admin?
-
-      redirect_to(root_path) unless current_user.admin?
-
     end
 end
