@@ -23,7 +23,7 @@ module SessionsHelper
 
  	def current_user?(user)
  		user == current_user
-s
+
  	end
 
  	def current_user?(user)

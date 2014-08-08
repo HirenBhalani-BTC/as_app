@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe Micropost do
-<<<<<<< HEAD
   let(:user){FactoryGirl.create(:user)}
 
   before do
@@ -32,8 +31,7 @@ describe Micropost do
   		before { @micropost.content="a"*141}
   		it { should_not be_valid}
   	end
-=======
-	let(:user) { FactoryGirl.create(:user)}
+  	let(:user) { FactoryGirl.create(:user)}
 	# before do
 	# 	@micropost==Micropost.new(content: "Lorem ipsum", user_id: user.id)
 	# end
@@ -52,5 +50,4 @@ describe Micropost do
 		before { @micropost.user_id=nil}
 		it { should_not be_valid}
 	end
->>>>>>> user-microposts
 end
